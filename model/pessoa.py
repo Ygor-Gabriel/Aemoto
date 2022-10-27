@@ -1,7 +1,7 @@
 from helpers.database import db
 
 
-class PessoaModel_db():
+class Pessoa_db():
 
     def __init__(self, nome, nascimento, email, telefone):
         self.nome = nome
