@@ -1,16 +1,12 @@
-from helpers.database import db
+from model.pessoa import Pessoa
 
+class Aluno(Pessoa):
 
-from model.pessoa import Pessoa_db
-
-class Aluno_db():
-
-    def __init__(self,nome, instituicaoDeEnsino, curso, matricula):
-        self.nome = nome
+    def __init__(self, nome, nascimento, email, telefone, instituicaoDeEnsino, curso, matricula):
+        super().__init__(nome, nascimento, email, telefone)
         self.instituicaoDeEnsino = instituicaoDeEnsino
         self.curso = curso
         self.matricula = matricula
-        
+    
     def __repr__(self):
-        return '<Address %r>' % self.instituicaoDeEnsino
-      
+        return '<Nome: {} Nascimento: {} Email: {} Telefone: {} Instituto: {} Curso: {} Matrícula: {}>'.format(self.nome, self.nascimento, self.email, self.telefone, self.instituicaoDeEnsino, self.curso, self.matricula)

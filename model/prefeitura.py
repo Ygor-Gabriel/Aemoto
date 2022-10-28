@@ -1,10 +1,10 @@
-from helpers.database import db
-
-
 class Prefeitura():
- 
-    def __init__(self, email):
+
+    def __init__(self, secretarios, email, telefone, nomePrefeito):
+        self.secretarios = secretarios
         self.email = email
+        self.telefone = telefone
+        self.nomePrefeito = nomePrefeito
 
     def __repr__(self):
-        return '<Prefeitura %r>' % self.email
+        return '<Secretarios: {} Email: {} Telefone: {} Nome do Prefeito: {}'.format(self.secretarios, self.email, self.telefone, self.nomePrefeito)
